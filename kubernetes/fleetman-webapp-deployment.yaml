@@ -17,7 +17,3 @@ spec:
         image: supinfo4kube/web-app:1.0.0-dockercompose
         ports:
         - containerPort: 80
-      dependsOn:
-      - name: fleetman-api-gateway
-      networks:
-      - name: fleetman

@@ -20,5 +20,3 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: local-microservice
-      networks:
-      - name: fleetman

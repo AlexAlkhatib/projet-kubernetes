@@ -18,5 +18,3 @@ spec:
         ports:
         - containerPort: 8161
         - containerPort: 61616
-      networks:
-      - name: fleetman
