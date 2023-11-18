@@ -18,3 +18,14 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
+# L'énoncé exige un service par déploiement. Cependant, ce déploiement n'expose aucun port.
+# Or, il est impossible de créer un service sans exposer de port. Il ne serait pas raisonnable des ports sans raison.
+# ---
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: fleetman-position-simulator
+# spec:
+#   selector:
+#     app: fleetman-position-simulator
+#   type: ClusterIP
