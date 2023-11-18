@@ -18,6 +18,13 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
+        volumeMounts:
+          - name: storage
+            mountPath: "/data/db"
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: fleetman-mongodb-volume-claim
 ---
 apiVersion: v1
 kind: Service
@@ -30,3 +37,28 @@ spec:
     - port: 27017
       targetPort: 27017
   type: ClusterIP
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: fleetman-mongodb-volume
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/mongodb-data"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: fleetman-mongodb-volume-claim
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
