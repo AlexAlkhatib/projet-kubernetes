@@ -1,3 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fleetman-mongodb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fleetman-mongodb
+  template:
+    metadata:
+      labels:
+        app: fleetman-mongodb
+    spec:
+      containers:
+      - name: fleetman-mongodb
+        image: mongo:3.6.23
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: production-microservice
+---
 apiVersion: v1
 kind: Service
 metadata:
