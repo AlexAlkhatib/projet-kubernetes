@@ -17,4 +17,4 @@ spec:
         image: supinfo4kube/position-simulator:1.0.1
         env:
         - name: SPRING_PROFILES_ACTIVE
-          value: local-microservice
+          value: production-microservice
