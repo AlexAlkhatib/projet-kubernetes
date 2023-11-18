@@ -15,6 +15,22 @@ spec:
       containers:
       - name: fleetman-queue
         image: supinfo4kube/queue:1.0.1
-        ports:
+        ports: # Ports exposés par le conteneur
         - containerPort: 8161
         - containerPort: 61616
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fleetman-queue
+spec:
+  selector:
+    app: fleetman-queue
+  ports:
+    - port: 8161 # Port du le conteneur ("interne", correspond à ports.containerPort)
+      targetPort: 8161 # Port exposé par le service ("externe")
+      name: port-8161
+    - port: 61616
+      targetPort: 61616
+      name: port-61616
+  type: ClusterIP
