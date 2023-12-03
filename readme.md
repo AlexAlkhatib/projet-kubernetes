@@ -6,6 +6,8 @@ Le répertoire `docker/` contient le fichier `compose.yaml` original.
 
 Le répertoire `kubernetes/` contient les manifestes kubernetes.
 
+Le fichier `Montage cluster Kubernetes.pdf` contient le document détaillant la procédure utilisée pour créer un cluster.
+
 ## Mise en route du déploiement Kubernetes
 
 Pré-requis : Docker Desktop avec l'option Kubernetes activée, kubectl.
