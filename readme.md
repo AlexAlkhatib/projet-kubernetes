@@ -129,8 +129,4 @@ GitHub : [github.com/AlexAlkhatib](https://github.com/AlexAlkhatib)
 
 ## 📄 Licence
 
-```
-MIT License  
-Copyright (c) 2025 Alex Alkhatib  
-…  
-```
+MIT License  Copyright (c) 2025 Alex Alkhatib  
