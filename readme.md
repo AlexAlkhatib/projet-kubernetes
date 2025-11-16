@@ -93,8 +93,6 @@ http://EXTERNAL-IP:80
 ✔ Troubleshooting (kubectl logs, describe, get…)
 ✔ Capacité à transformer un docker-compose en architecture Kubernetes
 
-C’est exactement le type de compétences recherchées en **DevOps**, **Cloud Engineer**, **SRE**, **Infrastructure Engineer**, ou **Développeur Fullstack orienté déploiement**.
-
 
 ## 📄 Documentation technique
 
