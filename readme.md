@@ -1,4 +1,4 @@
-# **4KUBE — Déploiement Kubernetes de Fleetman**
+# 🚚 **4KUBE — Déploiement Kubernetes de Fleetman**
 
 **4KUBE : Fleetman** est un mini-projet DevOps visant à déployer une application distribuée de **suivi de flotte de véhicules en temps réel** sur un cluster Kubernetes.
 Ce projet démontre ma capacité à orchestrer des conteneurs Docker, à créer un cluster Kubernetes fonctionnel et à assurer la **scalabilité**, la **résilience** et la **fiabilité** d’une application distribuée.
